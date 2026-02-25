@@ -269,8 +269,8 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://t.me/automaster12bot" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="gradient-bg hover:opacity-90 text-lg px-8 py-6">
+                <a href="#" onClick={(e)=>{e.preventDefault();}} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out text-lg px-8 py-6">
                     <MessageCircle className="mr-2 w-5 h-5" />
                     Получить консультацию
                   </Button>
@@ -676,7 +676,7 @@ export default function Home() {
                         size="lg" 
                         className={`w-full ${complaintData.type === 'complaint' 
                           ? 'bg-red-500 hover:bg-red-600' 
-                          : 'bg-green-500 hover:bg-green-600'
+                          : 'bg-green-500 hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out'
                         } text-white`}
                         disabled={complaintSubmitting}
                       >
@@ -784,7 +784,7 @@ export default function Home() {
                     <div className="text-sm text-muted-foreground">Мессенджеры</div>
                     <div className="flex gap-4 mt-1">
                       <a href="https://wa.me/79780884106" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-primary transition-colors">WhatsApp</a>
-                      <a href="https://t.me/automaster12bot" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-primary transition-colors">Telegram</a>
+                      <a href="#" onClick={(e)=>{e.preventDefault();}} target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-primary transition-colors">Telegram</a>
                     </div>
                   </div>
                 </div>
@@ -892,7 +892,7 @@ export default function Home() {
                         />
                       </div>
                       
-                      <Button type="submit" size="lg" className="w-full gradient-bg hover:opacity-90" disabled={isSubmitting}>
+                      <Button type="submit" size="lg" className="w-full gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out" disabled={isSubmitting}>
                         {isSubmitting ? (
                           <>
                             <svg className="animate-spin -ml-1 mr-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -1089,7 +1089,7 @@ export default function Home() {
                 onClick={() => setModalOpen(false)}
                 className="flex-1"
               >
-                <Button size="lg" className="w-full gradient-bg hover:opacity-90">
+                <Button size="lg" className="w-full gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out">
                   Оставить заявку
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
