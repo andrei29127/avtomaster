@@ -225,63 +225,26 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <a href="#" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
-                <Car className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <span className="text-xl font-bold">АвтоМастер</span>
-                <p className="text-xs text-muted-foreground hidden sm:block">Запчасти и ремонт</p>
-              </div>
-            </a>
-
-            <div className="hidden md:flex items-center gap-3">
-              <a href="#contact">
-                <Button className="gradient-bg hover:opacity-90 flex items-center gap-2">
-                  <Send className="w-5 h-5 text-white" />
-                  Оставить заявку
-                </Button>
-              </a>
-              <a href="#feedback">
-                <Button className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-white" />
-                  Обратная связь
-                </Button>
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <button 
-              className="md:hidden p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Nav */}
-          {mobileMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4 flex flex-col gap-3">
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full gradient-bg hover:opacity-90 flex items-center justify-center gap-2">
-                  <Send className="w-5 h-5 text-white" />
-                  Оставить заявку
-                </Button>
-              </a>
-              <a href="#feedback" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center gap-2">
-                  <MessageSquare className="w-5 h-5 text-white" />
-                  Обратная связь
-                </Button>
-              </a>
-            </nav>
-          )}
+      {/* Top Center Action Buttons */}
+      <div className="w-full flex justify-center pt-8 pb-4">
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
+          <a href="#contact">
+            <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out flex items-center gap-2 px-8 py-6 text-lg">
+              <Send className="w-6 h-6 text-white" />
+              Оставить заявку
+            </Button>
+          </a>
+          <a href="#feedback">
+            <Button className="bg-green-500 hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out text-white flex items-center gap-2 px-8 py-6 text-lg">
+              <MessageSquare className="w-6 h-6 text-white" />
+              Обратная связь
+            </Button>
+          </a>
         </div>
-      </header>
+      </div>
+
+      {/* Header */}
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center hero-gradient pt-20">
