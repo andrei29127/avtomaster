@@ -66,114 +66,149 @@ async function sendTelegram(token: string, chatId: string, text: string) {
 }
 
 function buildEmailHtml(data: ContactFormData, serviceText: string, dateStr: string): string {
-
-  const vinValue = String(data.vin || "").toUpperCase();
-
   return `
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<body style="margin:0;padding:25px 15px;background:#f2f2f2;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;">
-
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td align="center">
-
-<table width="100%" cellpadding="0" cellspacing="0"
-style="max-width:650px;background:#121212;border-radius:12px;
-overflow:hidden;color:#e7e7e7;border:1px solid #1f1f1f;">
-
-<tr>
-<td style="height:3px;background:#ff7a18;"></td>
-</tr>
-
-<tr>
-<td style="padding:16px 20px;border-bottom:1px solid #222;">
-<h2 style="margin:0;color:#ff7a18;font-size:24px;font-weight:900;">
-🔔 Новая заявка с сайта АвтоМастер
-</h2>
-</td>
-</tr>
-
-${buildRow("Имя", data.name)}
-${buildRow("Телефон", `<a href="tel:${data.phone}" style="color:#22c55e;font-size:21px;font-weight:900;text-decoration:none;">${data.phone}</a>`, true)}
-
-<tr>
-<td style="padding:10px 20px;border-bottom:1px solid #222;">
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td style="width:140px;color:#ff7a18;font-size:16px;font-weight:800;">VIN</td>
-<td style="background:#1a1a1a;border:1px solid #262626;padding:6px 10px;
-border-radius:6px;font-family:Consolas,'Courier New',monospace;
-font-size:21px;font-weight:900;color:#22c55e;">
-${vinValue}
-</td>
-</tr>
-</table>
-</td>
-</tr>
-
-${buildRow("Услуга", serviceText)}
-${data.message ? buildRow("Сообщение", data.message) : ""}
-
-<tr>
-<td style="padding:12px 20px;color:#9aa0a6;font-size:14px;">
-Дата: ${dateStr} (МСК)
-</td>
-</tr>
-
-<tr>
-<td style="padding:0 20px 18px;text-align:center;">
-<a href="tel:${data.phone}" style="display:inline-block;background:#ff7a18;color:#0b0b0b;
-text-decoration:none;padding:10px 22px;border-radius:8px;font-size:17px;font-weight:900;">
-📞 Позвонить клиенту
-</a>
-</td>
-</tr>
-
-<tr>
-<td style="padding:10px 20px;border-top:1px solid #222;background:#101010;
-color:#6f6f6f;font-size:12px;text-align:center;">
-АвтоМастер • уведомление с сайта
-</td>
-</tr>
-
-</table>
-
-</td>
-</tr>
-</table>
-
+<body style="margin: 0; padding: 0; background-color: #e8e8e8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #e8e8e8; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <!-- Карточка заявки -->
+        <table role="presentation" width="100%" style="max-width: 420px; background: #ffffff; border-radius: 12px; overflow: hidden;">
+          
+          <!-- Оранжевая полоска сверху -->
+          <tr>
+            <td style="height: 5px; background: #f97316;"></td>
+          </tr>
+          
+          <!-- Заголовок -->
+          <tr>
+            <td style="padding: 30px 28px 16px; text-align: center;">
+              <h1 style="margin: 0 0 4px; color: #333; font-size: 24px; font-weight: 700;">
+                АвтоМастер
+              </h1>
+              <p style="margin: 0; color: #999; font-size: 13px;">
+                Запчасти и ремонт
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Уведомление о заявке -->
+          <tr>
+            <td style="padding: 0 28px 24px; text-align: center;">
+              <table role="presentation" cellspacing="0" cellpadding="0" style="margin: 0 auto;">
+                <tr>
+                  <td style="background-color: #fff7ed; border-radius: 16px; padding: 6px 16px;">
+                    <span style="color: #f97316; font-size: 12px; font-weight: 600;">🔔 НОВАЯ ЗАЯВКА</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Данные клиента -->
+          <tr>
+            <td style="padding: 0 28px 8px;">
+              
+              <!-- Имя -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                <tr>
+                  <td style="background-color: #f5f5f5; border-radius: 10px; padding: 14px 16px;">
+                    <p style="margin: 0 0 3px; color: #999; font-size: 11px;">Имя</p>
+                    <p style="margin: 0; color: #333; font-size: 15px; font-weight: 600;">${data.name}</p>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Телефон -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                <tr>
+                  <td style="background-color: #f5f5f5; border-radius: 10px; padding: 14px 16px;">
+                    <p style="margin: 0 0 3px; color: #999; font-size: 11px;">Телефон</p>
+                    <p style="margin: 0; color: #333; font-size: 15px; font-weight: 600;">
+                      <a href="tel:${data.phone}" style="color: #333; text-decoration: none;">${data.phone}</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- VIN -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                <tr>
+                  <td style="background-color: #f5f5f5; border-radius: 10px; padding: 14px 16px;">
+                    <p style="margin: 0 0 3px; color: #999; font-size: 11px;">VIN</p>
+                    <p style="margin: 0; color: #333; font-size: 15px; font-weight: 600; font-family: 'Courier New', monospace;">${data.vin.toUpperCase()}</p>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Услуга -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                <tr>
+                  <td style="background-color: #f5f5f5; border-radius: 10px; padding: 14px 16px;">
+                    <p style="margin: 0 0 3px; color: #999; font-size: 11px;">Услуга</p>
+                    <p style="margin: 0; color: #333; font-size: 15px; font-weight: 600;">${serviceText}</p>
+                  </td>
+                </tr>
+              </table>
+              
+              ${data.message ? `
+              <!-- Комментарий -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                <tr>
+                  <td style="background-color: #f5f5f5; border-radius: 10px; padding: 14px 16px;">
+                    <p style="margin: 0 0 3px; color: #999; font-size: 11px;">Комментарий</p>
+                    <p style="margin: 0; color: #333; font-size: 14px; line-height: 1.4;">${data.message}</p>
+                  </td>
+                </tr>
+              </table>
+              ` : ''}
+              
+            </td>
+          </tr>
+          
+          <!-- Дата и время -->
+          <tr>
+            <td style="padding: 16px 28px 24px; text-align: center;">
+              <p style="margin: 0; color: #bbb; font-size: 12px;">
+                ${dateStr} (МСК)
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Кнопка Позвонить -->
+          <tr>
+            <td style="padding: 0 28px 32px; text-align: center;">
+              <a href="tel:${data.phone}" style="display: inline-block; background: #f97316; color: #ffffff; text-decoration: none; padding: 13px 32px; border-radius: 8px; font-size: 14px; font-weight: 600;">
+                📞 Позвонить клиенту
+              </a>
+            </td>
+          </tr>
+          
+          <!-- Подвал -->
+          <tr>
+            <td style="background-color: #f5f5f5; padding: 18px 28px; text-align: center;">
+              <p style="margin: 0 0 4px; color: #999; font-size: 11px;">
+                Республика Крым, г. Керчь, ул. Героев Сталинграда, 23
+              </p>
+              <p style="margin: 0; color: #bbb; font-size: 10px;">
+                © АвтоМастер
+              </p>
+            </td>
+          </tr>
+          
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
-`;
+  `;
 }
-
-function buildRow(label: string, value: string, highlight: boolean = false) {
-  return `
-<tr>
-<td style="padding:10px 20px;border-bottom:1px solid #222;">
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td style="width:140px;color:#ff7a18;font-size:16px;font-weight:800;">
-${label}
-</td>
-<td style="font-size:${highlight ? "21px" : "18px"};
-font-weight:${highlight ? "900" : "600"};
-color:#e7e7e7;">
-${value}
-</td>
-</tr>
-</table>
-</td>
-</tr>
-`;
-}
-
 
 async function sendEmail(data: ContactFormData) {
   if (!EMAIL_FROM || !EMAIL_PASSWORD) return false;
