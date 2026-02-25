@@ -239,29 +239,17 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
-              <a href="#advantages" className="text-sm hover:text-primary transition-colors">Преимущества</a>
-              <a href="#faq" className="text-sm hover:text-primary transition-colors">FAQ</a>
-              <a href="#feedback" className="text-sm hover:text-primary transition-colors">Обратная связь</a>
-              <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
-            </nav>
-
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-4">
-                <a href="tel:+79780884106" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span className="font-medium">+7 (978) 088-41-06</span>
-                </a>
-                <a href="tel:+79782978594" className="hidden xl:flex items-center gap-2 text-sm hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span className="font-medium">+7 (978) 297-85-94</span>
-                </a>
-              </div>
+            <div className="hidden md:flex items-center gap-3">
               <a href="#contact">
-                <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out">
+                <Button className="gradient-bg hover:opacity-90 flex items-center gap-2">
+                  <Send className="w-5 h-5 text-white" />
                   Оставить заявку
+                </Button>
+              </a>
+              <a href="#feedback">
+                <Button className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2">
+                  <MessageSquare className="w-5 h-5 text-white" />
+                  Обратная связь
                 </Button>
               </a>
             </div>
@@ -277,25 +265,17 @@ export default function Home() {
 
           {/* Mobile Nav */}
           {mobileMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4 flex flex-col gap-4">
-              <a href="#services" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Услуги</a>
-              <a href="#advantages" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Преимущества</a>
-              <a href="#faq" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
-              <a href="#feedback" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Отзывы</a>
-              <a href="#contact" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
-              <div className="space-y-2">
-                <a href="tel:+79780884106" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span className="font-medium">+7 (978) 088-41-06</span>
-                </a>
-                <a href="tel:+79782978594" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
-                  <Phone className="w-4 h-4 text-primary" />
-                  <span className="font-medium">+7 (978) 297-85-94</span>
-                </a>
-              </div>
-              <a href="#contact" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out w-full">
+            <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4 flex flex-col gap-3">
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full gradient-bg hover:opacity-90 flex items-center justify-center gap-2">
+                  <Send className="w-5 h-5 text-white" />
                   Оставить заявку
+                </Button>
+              </a>
+              <a href="#feedback" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center gap-2">
+                  <MessageSquare className="w-5 h-5 text-white" />
+                  Обратная связь
                 </Button>
               </a>
             </nav>
@@ -327,7 +307,7 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://t.me/automaster12bot" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out text-lg px-8 py-6">
+                  <Button size="lg" className="gradient-bg hover:opacity-90 text-lg px-8 py-6">
                     <MessageCircle className="mr-2 w-5 h-5" />
                     Получить консультацию
                   </Button>
@@ -733,7 +713,7 @@ export default function Home() {
                         size="lg" 
                         className={`w-full ${complaintData.type === 'complaint' 
                           ? 'bg-red-500 hover:bg-red-600' 
-                          : 'bg-green-500 hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out'
+                          : 'bg-green-500 hover:bg-green-600'
                         } text-white`}
                         disabled={complaintSubmitting}
                       >
@@ -949,7 +929,7 @@ export default function Home() {
                         />
                       </div>
                       
-                      <Button type="submit" size="lg" className="w-full gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out" disabled={isSubmitting}>
+                      <Button type="submit" size="lg" className="w-full gradient-bg hover:opacity-90" disabled={isSubmitting}>
                         {isSubmitting ? (
                           <>
                             <svg className="animate-spin -ml-1 mr-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -1146,7 +1126,7 @@ export default function Home() {
                 onClick={() => setModalOpen(false)}
                 className="flex-1"
               >
-                <Button size="lg" className="w-full gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out">
+                <Button size="lg" className="w-full gradient-bg hover:opacity-90">
                   Оставить заявку
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
