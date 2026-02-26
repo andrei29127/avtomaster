@@ -141,3 +141,5 @@ html {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
 }
+
+@import './garage.css';
