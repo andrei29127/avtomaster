@@ -14,25 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
-  openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-  },
+  title: "АвтоМастер — Техцентр в Керчи",
+  description:
+    "АвтоМастер — техцентр: ремонт авто и запчасти в Керчи. Подбор по VIN, консультация, обратная связь.",
 };
 
 export default function RootLayout({
@@ -41,56 +25,66 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body style={{ paddingBottom: "80px" }}
-       className={`${geistSans.variable} ${geistMono.variable} antialiased text-foreground pb-24`}
+    <html lang="ru">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-foreground pb-24`}
       >
         {children}
         <Toaster />
-      
-      {/* GLOBAL STICKY ACTION BAR */}
-      <div className="sm:hidden" style={{
-        position: "fixed",
-        bottom: "0",
-        left: "0",
-        right: "0",
-        zIndex: 9999,
-        background: "#000",
-        backdropFilter: "blur(8px)",
-        borderTop: "1px solid #222",
-        padding: "10px"
-      }}>
-        <div style={{display:"flex", gap:"10px", maxWidth:"700px", margin:"0 auto"}}>
-          <a href="#contact" style={{flex:1}}>
-            <button style={{
-              width:"100%",
-              background:"linear-gradient(90deg,#ff7a18,#ffb347)",
-              color:"#fff",
-              padding:"14px",
-              borderRadius:"10px",
-              fontWeight:700,
-              border:"none"
-            }}>
-              🚗 Заявка
-            </button>
-          </a>
-          <a href="#feedback" style={{flex:1}}>
-            <button style={{
-              width:"100%",
-              background:"#22c55e",
-              color:"#fff",
-              padding:"14px",
-              borderRadius:"10px",
-              fontWeight:700,
-              border:"none"
-            }}>
-              💬 Связь
-            </button>
-          </a>
-        </div>
-      </div>
 
-</body>
+        {/* GLOBAL STICKY ACTION BAR */}
+        <div
+          style={{
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 9999,
+            background: "rgba(255,255,255,0.95)",
+            backdropFilter: "blur(8px)",
+            borderTop: "1px solid #ddd",
+            padding: "10px",
+          }}
+        >
+          <div style={{ display: "flex", gap: "10px", maxWidth: "700px", margin: "0 auto" }}>
+            <a href="#contact" style={{ flex: 1 }}>
+              <button
+                style={{
+                  width: "100%",
+                  background: "linear-gradient(90deg,#ff7a18,#ffb347)",
+                  color: "#fff",
+                  padding: "14px",
+                  borderRadius: "10px",
+                  fontWeight: 700,
+                  border: "none",
+                }}
+              >
+                🚗 Заявка
+              </button>
+            </a>
+
+            <a href="#feedback" style={{ flex: 1 }}>
+              <button
+                style={{
+                  width: "100%",
+                  background: "#22c55e",
+                  color: "#fff",
+                  padding: "14px",
+                  borderRadius: "10px",
+                  fontWeight: 700,
+                  border: "none",
+                }}
+              >
+                💬 Связь
+              </button>
+            </a>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
+
+
+
+
