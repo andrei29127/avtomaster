@@ -59,3 +59,17 @@ body::before {
   pointer-events: none;
   filter: grayscale(100%) blur(0.6px);
 }
+
+
+/* MOBILE BOTTOM BAR */
+.fixed.bottom-0.left-0.right-0 {
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.3);
+}
+
+/* Hide bottom bar on desktop */
+@media (min-width: 768px) {
+  .fixed.bottom-0.left-0.right-0 {
+    display: none !important;
+  }
+}
