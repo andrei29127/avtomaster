@@ -34,15 +34,16 @@ export default function RootLayout({
 
         {/* GLOBAL STICKY ACTION BAR */}
         <div
+          className="mobile-bottom-bar"
           style={{
             position: "fixed",
             bottom: 0,
             left: 0,
             right: 0,
             zIndex: 9999,
-            background: "rgba(255,255,255,0.95)",
+            background: "rgba(0,0,0,0.3)",
             backdropFilter: "blur(8px)",
-            borderTop: "1px solid #ddd",
+            borderTop: "1px solid rgba(255,255,255,0.15)",
             padding: "10px",
           }}
         >
