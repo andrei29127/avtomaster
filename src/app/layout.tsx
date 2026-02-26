@@ -48,18 +48,20 @@ export default function RootLayout({
         {children}
         <Toaster />
       
-      {/* GLOBAL STICKY ACTION BAR */}
-      <div style={{
-        position: "fixed",
-        bottom: "0",
-        left: "0",
-        right: "0",
-        zIndex: 9999,
-        background: "rgba(255,255,255,0.95)",
-        backdropFilter: "blur(8px)",
-        borderTop: "1px solid #ddd",
-        padding: "10px"
-      }}>
+      {/* GLOBAL STICKY ACTION BAR (mobile only) */}
+<div
+  className="sm:hidden"
+  style={{
+    position: "fixed",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 9999,
+    background: "#000",
+    borderTop: "1px solid #222",
+    padding: "10px"
+  }}
+>
         <div style={{display:"flex", gap:"10px", maxWidth:"700px", margin:"0 auto"}}>
           <a href="#contact" style={{flex:1}}>
             <button style={{
