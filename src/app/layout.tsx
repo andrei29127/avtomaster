@@ -49,7 +49,7 @@ export default function RootLayout({
         <Toaster />
       
       {/* GLOBAL STICKY ACTION BAR */}
-      <div className=\"sm:hidden\" style={{
+      <div className="sm:hidden" style={{
         position: "fixed",
         bottom: "0",
         left: "0",
