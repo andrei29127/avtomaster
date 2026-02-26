@@ -1,20 +1,21 @@
 'use client'
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { 
-  Wrench, 
-  Car, 
-  Shield, 
-  CheckCircle2, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  useState } from 'react',
+  import { Button } from '@/components/ui/button',
+  import { Input } from '@/components/ui/input',
+  import { Textarea } from '@/components/ui/textarea',
+  import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+  import { Badge } from '@/components/ui/badge',
+  import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion',
+  import {,
+  Wrench,
+  Car,
+  Shield,
+  CheckCircle2,
+  Phone,
+  Mail,
+  MapPin,
   Clock,
   Search,
   Package,
@@ -30,8 +31,8 @@ import {
   Settings,
   ShieldCheck,
   MessageSquare,
-  Send
-  Gauge,
+  Send,
+  Gauge
 } from 'lucide-react'
 
 export default function Home() {
