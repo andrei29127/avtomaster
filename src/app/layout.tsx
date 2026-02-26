@@ -43,25 +43,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body style={{ paddingBottom: "80px" }}
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground pb-24`}
       >
         {children}
         <Toaster />
       
-      {/* GLOBAL STICKY ACTION BAR (mobile only) */}
-<div
-  className="sm:hidden"
-  style={{
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    zIndex: 9999,
-    background: "#000",
-    borderTop: "1px solid #222",
-    padding: "10px"
-  }}
->
+      {/* GLOBAL STICKY ACTION BAR */}
+      <div className=\"sm:hidden\" style={{
+        position: "fixed",
+        bottom: "0",
+        left: "0",
+        right: "0",
+        zIndex: 9999,
+        background: "#000",
+        backdropFilter: "blur(8px)",
+        borderTop: "1px solid #222",
+        padding: "10px"
+      }}>
         <div style={{display:"flex", gap:"10px", maxWidth:"700px", margin:"0 auto"}}>
           <a href="#contact" style={{flex:1}}>
             <button style={{
