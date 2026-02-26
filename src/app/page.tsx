@@ -225,6 +225,27 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      
+      {/* Brand / Tech Center Title */}
+      <div className="w-full flex justify-center pt-8">
+        <div className="flex flex-col items-center text-center">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center shadow-lg">
+              <Car className="w-7 h-7 text-white" />
+            </div>
+            <div className="text-left">
+              <div className="text-3xl font-extrabold tracking-tight">АвтоМастер</div>
+              <div className="text-sm text-muted-foreground font-medium">Техцентр • Запчасти • Ремонт</div>
+            </div>
+          </div>
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            <Badge variant="secondary" className="text-sm">Подбор по VIN</Badge>
+            <Badge variant="secondary" className="text-sm">Новые и Б/У запчасти</Badge>
+            <Badge variant="secondary" className="text-sm">Гарантия на работы</Badge>
+          </div>
+        </div>
+      </div>
+
       {/* Top Center Action Buttons */}
       <div className="w-full flex justify-center pt-8 pb-4">
         <div className="flex flex-col sm:flex-row gap-4 items-center">
