@@ -226,30 +226,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       
-      {/* Hero / Garage first screen */}
-      <section className="hero-garage">
-        <div className="garage-overlay" />
-        <div className="garage-content">
-          <div className="engine-light">
-            <span className="lamp" />
-            CHECK ENGINE
-          </div>
-
-          <h1>АвтоМастер</h1>
-          <p>Классический сервис • Гаражный подход</p>
-
-          <a href="#contact" className="garage-btn">
-            Записаться
-          </a>
-
-          <div className="garage-sub">
-            Диагностика • Ремонт • Запчасти
-          </div>
-        </div>
-      </section>
-
-
-      
       {/* Brand / Tech Center Title */}
       <div className="w-full flex justify-center pt-8">
         <div className="flex flex-col items-center text-center">
