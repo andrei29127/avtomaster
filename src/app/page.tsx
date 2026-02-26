@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import {
-  Wrench,
-  Car,
-  Shield,
-  CheckCircle2,
-  Phone,
-  Mail,
-  MapPin,
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { 
+  Wrench, 
+  Car, 
+  Shield, 
+  CheckCircle2, 
+  Phone, 
+  Mail, 
+  MapPin, 
   Clock,
   Search,
   Package,
@@ -30,10 +30,8 @@ import {
   Settings,
   ShieldCheck,
   MessageSquare,
-  Send,
-  Gauge,
-} from 'lucide-react';
-
+  Send
+} from 'lucide-react'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -226,19 +224,9 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground">
       
-      
-      {/* Decorative background */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 via-background to-background" />
-        <div className="absolute -top-28 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-orange-500/15 blur-3xl" />
-        <div className="absolute top-52 right-[-140px] h-[420px] w-[420px] rounded-full bg-green-500/12 blur-3xl" />
-        <div className="absolute bottom-[-180px] left-[-140px] h-[480px] w-[480px] rounded-full bg-orange-500/10 blur-3xl" />
-        <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,hsl(var(--foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground))_1px,transparent_1px)] [background-size:56px_56px]" />
-      </div>
-
-{/* Brand / Tech Center Title */}
+      {/* Brand / Tech Center Title */}
       <div className="w-full flex justify-center pt-8">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-3">
@@ -255,46 +243,12 @@ export default function Home() {
             <Badge variant="secondary" className="text-sm">Новые и Б/У запчасти</Badge>
             <Badge variant="secondary" className="text-sm">Гарантия на работы</Badge>
           </div>
-        
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-3xl">
-            <div className="rounded-2xl border border-border bg-background/70 backdrop-blur p-4 flex items-center gap-3 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-orange-500/15 flex items-center justify-center">
-                <Car className="w-5 h-5 text-primary" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold leading-tight">Техцентр</div>
-                <div className="text-xs text-muted-foreground">Диагностика и ремонт</div>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-background/70 backdrop-blur p-4 flex items-center gap-3 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-green-500/15 flex items-center justify-center">
-                <Gauge className="w-5 h-5 text-green-500" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold leading-tight">Check Engine</div>
-                <div className="text-xs text-muted-foreground">Поиск причин быстро</div>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-background/70 backdrop-blur p-4 flex items-center gap-3 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-orange-500/15 flex items-center justify-center">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold leading-tight">Гарантия</div>
-                <div className="text-xs text-muted-foreground">На работы и детали</div>
-              </div>
-            </div>
-          </div>
-
-</div>
+        </div>
       </div>
 
       {/* Top Center Action Buttons */}
-      <div className="hidden sm:flex w-full justify-center pt-6 pb-4">
-        <div className="rounded-2xl border border-border bg-background/70 backdrop-blur px-4 py-4 shadow-sm">
-          <div className="flex flex-col sm:flex-row gap-4 items-center">
+      <div className="hidden sm:flex w-full justify-center pt-8 pb-4">
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
           <a href="#contact">
             <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out flex items-center gap-2 px-8 py-6 text-lg">
               <Send className="w-6 h-6 text-white" />
