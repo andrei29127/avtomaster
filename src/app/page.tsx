@@ -246,9 +246,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Top Center Action Buttons */}
+      
      {/* Top Center Action Buttons */}
-<div className="w-full flex justify-center pt-8 pb-4">
+<div className="hidden sm:flex w-full justify-center pt-8 pb-4">
   <div className="flex flex-col sm:flex-row gap-4 items-center">
           <a href="#contact">
             <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out flex items-center gap-2 px-8 py-6 text-lg">
