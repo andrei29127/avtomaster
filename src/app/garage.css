@@ -1,22 +1,9 @@
 
 /* GARAGE BACKGROUND */
 body {
-  background: url('/garage-bg.jpg') center no-repeat;
-background-size: contain;
-background-position: center bottom;
+  background: url('/garage-bg.jpg') center/cover fixed no-repeat;
 }
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(
-    circle at center bottom,
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.85)
-  );
-  pointer-events: none;
-  z-index: -1;
-}
+
 body::before {
   content: "";
   position: fixed;
@@ -79,4 +66,19 @@ body::before {
   .mobile-bottom-bar {
     display: none !important;
   }
+}
+
+
+/* Background atmosphere */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center bottom,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.85)
+  );
+  pointer-events: none;
+  z-index: -1;
 }
