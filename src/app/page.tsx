@@ -594,7 +594,7 @@ export default function Home() {
             </div>
             
             <div>
-              <Card className="bg-card border-border p-6 md:p-8">
+              <Card className="bg-card border-border p-6 md:p-8" id="contact-form">
                 <CardHeader className="p-0 mb-6">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
@@ -814,7 +814,7 @@ export default function Home() {
             </div>
             
             <div>
-              <Card className="bg-card border-border p-6 md:p-8">
+              <Card className="bg-card border-border p-6 md:p-8" id="feedback-form">
                 <CardHeader className="p-0 mb-6">
                   <CardTitle>Форма заявки</CardTitle>
                   <CardDescription>
