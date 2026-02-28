@@ -73,3 +73,20 @@ body::before {
 #contact-form, #feedback-form {
   scroll-margin-top: 110px;
 }
+
+
+/* NEW SITE BACKGROUND */
+body {
+  background: url('/site-bg.jpg') center no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mobile responsive background */
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-position: top center;
+    background-color: #0d0d0d;
+  }
+}
