@@ -249,13 +249,15 @@ export default function Home() {
       {/* Top Center Action Buttons */}
       <div className="hidden sm:flex w-full justify-center pt-8 pb-4">
         <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <a href="#contact">
+          {/* Якорь ведёт прямо к форме заявки, а не к заголовку секции */}
+          <a href="#contact-form">
             <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out flex items-center gap-2 px-8 py-6 text-lg">
               <Send className="w-6 h-6 text-white" />
               Оставить заявку
             </Button>
           </a>
-          <a href="#feedback">
+          {/* Якорь ведёт прямо к форме обратной связи, а не к заголовку секции */}
+          <a href="#feedback-form">
             <Button className="bg-green-500 hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out text-white flex items-center gap-2 px-8 py-6 text-lg">
               <MessageSquare className="w-6 h-6 text-white" />
               Обратная связь
@@ -1107,7 +1109,7 @@ export default function Home() {
             {/* Modal Footer */}
             <div className="sticky bottom-0 bg-card border-t border-border p-6 flex flex-col sm:flex-row gap-3">
               <a 
-                href="#contact" 
+                href="#contact-form" 
                 onClick={() => setModalOpen(false)}
                 className="flex-1"
               >

@@ -249,13 +249,15 @@ export default function Home() {
       {/* Top Center Action Buttons */}
       <div className="hidden sm:flex w-full justify-center pt-8 pb-4">
         <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <a href="#contact">
+          {/* Якорь ведёт прямо к форме заявки, а не к заголовку секции */}
+          <a href="#contact-form">
             <Button className="gradient-bg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-out flex items-center gap-2 px-8 py-6 text-lg">
               <Send className="w-6 h-6 text-white" />
               Оставить заявку
             </Button>
           </a>
-          <a href="#feedback">
+          {/* Якорь ведёт прямо к форме обратной связи, а не к заголовку секции */}
+          <a href="#feedback-form">
             <Button className="bg-green-500 hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 ease-out text-white flex items-center gap-2 px-8 py-6 text-lg">
               <MessageSquare className="w-6 h-6 text-white" />
               Обратная связь
@@ -594,9 +596,13 @@ export default function Home() {
             </div>
             
             <div>
-              <Card id="feedback-form" className="bg-card border-border p-6 md:p-8">
-  <CardHeader ...>
-    <CardTitle>Форма обратной связи</CardTitle>
+              <Card className="bg-card border-border p-6 md:p-8">
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
+                      <MessageSquare className="w-5 h-5 text-white" />
+                    </div>
+                    <CardTitle>Форма обратной связи</CardTitle>
                   </div>
                   <CardDescription>
                     Заполните форму и мы свяжемся с вами в ближайшее время
@@ -812,9 +818,9 @@ export default function Home() {
             </div>
             
             <div>
-              <Card id="contact-form" className="bg-card border-border p-6 md:p-8">
-  <CardHeader ...>
-    <CardTitle>Форма заявки</CardTitle>
+              <Card className="bg-card border-border p-6 md:p-8">
+                <CardHeader className="p-0 mb-6">
+                  <CardTitle>Форма заявки</CardTitle>
                   <CardDescription>
                     Заполните форму и мы свяжемся с вами в ближайшее время
                   </CardDescription>
@@ -1107,7 +1113,7 @@ export default function Home() {
             {/* Modal Footer */}
             <div className="sticky bottom-0 bg-card border-t border-border p-6 flex flex-col sm:flex-row gap-3">
               <a 
-                href="#contact" 
+                href="#contact-form" 
                 onClick={() => setModalOpen(false)}
                 className="flex-1"
               >
