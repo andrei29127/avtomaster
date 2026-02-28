@@ -638,6 +638,7 @@ export default function Home() {
                           required
                           className="bg-secondary border-border"
                         />
+                        <p className="text-xs text-white/60 mt-1">Номер телефона указывайте на котором есть мессенджер</p>
                       </div>
                       
                       <div>
@@ -844,7 +845,7 @@ export default function Home() {
                       </div>
                       
                       <div>
-                        <label className="text-sm font-medium mb-2 block">Телефон</label>
+                        <label className="text-sm font-medium mb-2 block">Телефон для связи</label>
                         <Input
                           type="tel"
                           placeholder="+7 (999) 123-45-67"
@@ -853,6 +854,7 @@ export default function Home() {
                           required
                           className="bg-secondary border-border"
                         />
+                        <p className="text-xs text-white/60 mt-1">Номер телефона указывайте на котором есть мессенджер</p>
                       </div>
                       
                       <div>
