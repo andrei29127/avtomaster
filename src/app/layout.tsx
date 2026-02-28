@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "АвтоМастер — Техцентр в Керчи",
+  title: "AutoMaster — Техцентр в Керчи",
   description:
-    "АвтоМастер — техцентр: ремонт авто и запчасти в Керчи. Подбор по VIN, консультация, обратная связь.",
+    "AutoMaster — техцентр: ремонт авто и запчасти в Керчи. Подбор по VIN, консультация, обратная связь.",
 };
 
 export default function RootLayout({
@@ -48,7 +48,7 @@ export default function RootLayout({
           }}
         >
           <div style={{ display: "flex", gap: "10px", maxWidth: "700px", margin: "0 auto" }}>
-            <a href="#feedback-form" style={{ flex: 1 }}>
+            <a href="#contact" style={{ flex: 1 }}>
               <button
                 style={{
                   width: "100%",
@@ -64,7 +64,7 @@ export default function RootLayout({
               </button>
             </a>
 
-            <a href="#contact-form" style={{ flex: 1 }}>
+            <a href="#feedback" style={{ flex: 1 }}>
               <button
                 style={{
                   width: "100%",

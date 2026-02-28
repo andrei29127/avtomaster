@@ -48,7 +48,7 @@ export default function RootLayout({
           }}
         >
           <div style={{ display: "flex", gap: "10px", maxWidth: "700px", margin: "0 auto" }}>
-            <a href="#contact-form" style={{ flex: 1 }}>
+            <a href="#contact" style={{ flex: 1 }}>
               <button
                 style={{
                   width: "100%",
@@ -64,7 +64,7 @@ export default function RootLayout({
               </button>
             </a>
 
-            <a href="#feedback-form" style={{ flex: 1 }}>
+            <a href="#feedback" style={{ flex: 1 }}>
               <button
                 style={{
                   width: "100%",

@@ -1,7 +1,7 @@
 
 /* GARAGE BACKGROUND */
 body {
-  background: url('/garage-bg.jpg') center/cover fixed no-repeat;
+  background: url('/site-bg.jpg') center/cover fixed no-repeat;
 }
 
 body::before {
