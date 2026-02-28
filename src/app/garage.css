@@ -20,14 +20,14 @@ body::after {
   pointer-events: none;
 
   background: url('/site-bg-v3.jpg') top center no-repeat;
-  background-size: 1500px auto;
+  background-size: 100% auto;
   background-color: #0d0d0d;
 }
 
 /* большие мониторы */
 @media (min-width: 1400px) {
   body::after {
-    background-size: 1800px auto;
+    background-size: 100% auto;
   }
 }
 
