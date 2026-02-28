@@ -78,14 +78,14 @@ body::before {
 body {
   background: url('/site-bg.jpg') top center no-repeat;
   background-attachment: fixed;
-  background-size: 1900px auto; /* prevents huge zoom on desktop */
+  background-size: 1500px auto; /* prevents huge zoom on desktop */
   background-color: #0d0d0d;
 }
 
 /* Large screens: a bit bigger */
 @media (min-width: 1400px) {
   body {
-    background-size: 2200px auto;
+    background-size: 1800px auto;
   }
 }
 
