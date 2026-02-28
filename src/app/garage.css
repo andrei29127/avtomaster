@@ -38,3 +38,14 @@ body::after {
     background-position: top center;
   }
 }
+
+
+#contact-form, #feedback-form {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  #contact-form, #feedback-form {
+    scroll-margin-top: 70px;
+  }
+}

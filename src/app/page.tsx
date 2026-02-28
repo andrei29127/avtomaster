@@ -594,7 +594,7 @@ export default function Home() {
             </div>
             
             <div>
-              <Card className="bg-card border-border p-6 md:p-8">
+              <Card id="feedback-form" className="bg-card border-border p-6 md:p-8">
                 <CardHeader className="p-0 mb-6">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
@@ -616,8 +616,7 @@ export default function Home() {
                       <p className="text-muted-foreground">Мы рассмотрим его в течение 24 часов</p>
                     </div>
                   ) : (
-                    <div id="feedback-form">
-                    <form onSubmit={handleComplaintSubmit} className="space-y-4">
+<form onSubmit={handleComplaintSubmit} className="space-y-4">
                       <div>
                         <label className="text-sm font-medium mb-2 block">Ваше имя</label>
                         <Input
@@ -723,8 +722,7 @@ export default function Home() {
                         Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                       </p>
                     </form>
-                    </div>
-                  )}
+)}
                 </CardContent>
               </Card>
             </div>
@@ -816,7 +814,7 @@ export default function Home() {
             </div>
             
             <div>
-              <Card className="bg-card border-border p-6 md:p-8">
+              <Card id="contact-form" className="bg-card border-border p-6 md:p-8">
                 <CardHeader className="p-0 mb-6">
                   <CardTitle>Форма заявки</CardTitle>
                   <CardDescription>
@@ -833,8 +831,7 @@ export default function Home() {
                       <p className="text-muted-foreground">Мы перезвоним вам в течение 15 минут</p>
                     </div>
                   ) : (
-                    <div id="contact-form">
-                    <form onSubmit={handleSubmit} className="space-y-4">
+<form onSubmit={handleSubmit} className="space-y-4">
                       <div>
                         <label className="text-sm font-medium mb-2 block">Ваше имя</label>
                         <Input
@@ -944,8 +941,7 @@ export default function Home() {
                         Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                       </p>
                     </form>
-                    </div>
-                  )}
+)}
                 </CardContent>
               </Card>
             </div>
