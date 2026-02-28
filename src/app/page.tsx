@@ -224,7 +224,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-transparent text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       
       {/* Brand / Tech Center Title */}
       <div className="w-full flex justify-center pt-8">
@@ -234,7 +234,7 @@ export default function Home() {
               <Car className="w-7 h-7 text-white" />
             </div>
             <div className="text-left">
-              <div className="text-3xl font-extrabold tracking-tight">AutoMaster</div>
+              <div className="text-3xl font-extrabold tracking-tight">АвтоМастер</div>
               <div className="text-sm text-muted-foreground font-medium">Техцентр • Запчасти • Ремонт</div>
             </div>
           </div>
@@ -274,8 +274,7 @@ export default function Home() {
         
         <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 hero-with-car">
-              <div className="car-overlay" aria-hidden="true"></div>
+            <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
                 <Sparkles className="w-4 h-4 text-primary" />
                 <span className="text-sm">Более 10 лет на рынке</span>
@@ -531,6 +530,7 @@ export default function Home() {
 
       {/* Complaints and Suggestions Section */}
       <section id="feedback" className="py-20 md:py-32">
+            <div id="feedback-form"></div>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -831,7 +831,8 @@ export default function Home() {
                       <p className="text-muted-foreground">Мы перезвоним вам в течение 15 минут</p>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <div id="contact-form"></div>
+              <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
                         <label className="text-sm font-medium mb-2 block">Ваше имя</label>
                         <Input
@@ -1138,7 +1139,7 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
                   <Car className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xl font-bold">AutoMaster</span>
+                <span className="text-xl font-bold">АвтоМастер</span>
               </div>
               <p className="text-muted-foreground mb-4 max-w-md">
                 Качественный ремонт автомобилей и безопасный подбор запчастей с защитой от мошенников. 
@@ -1180,7 +1181,7 @@ export default function Home() {
           
           <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 AutoMaster. Все права защищены.
+              © 2024 АвтоМастер. Все права защищены.
             </p>
             <p className="text-sm text-muted-foreground">
               Создано с ❤️ для автовладельцев

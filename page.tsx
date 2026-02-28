@@ -224,7 +224,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-transparent text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       
       {/* Brand / Tech Center Title */}
       <div className="w-full flex justify-center pt-8">
@@ -274,8 +274,7 @@ export default function Home() {
         
         <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 hero-with-car">
-              <div className="car-overlay" aria-hidden="true"></div>
+            <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border">
                 <Sparkles className="w-4 h-4 text-primary" />
                 <span className="text-sm">Более 10 лет на рынке</span>
