@@ -20,7 +20,7 @@ body::after {
   pointer-events: none;
 
   background: url('/site-bg-v2.jpg') top center no-repeat;
-  background-size: 100% auto;
+  background-size: 80% auto;
   background-color: #0d0d0d;
 }
 
