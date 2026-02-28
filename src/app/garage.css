@@ -27,7 +27,7 @@ body::after {
 /* большие мониторы */
 @media (min-width: 1400px) {
   body::after {
-    background-size: 100% auto;
+    background-size: 90% auto;
   }
 }
 
