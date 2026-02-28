@@ -19,7 +19,7 @@ body::after {
   z-index: -2;
   pointer-events: none;
 
-  background: url('/site-bg.jpg') top center no-repeat;
+  background: url('/site-bg-v2.jpg') top center no-repeat;
   background-size: 1500px auto;
   background-color: #0d0d0d;
 }
