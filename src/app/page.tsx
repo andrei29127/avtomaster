@@ -616,8 +616,7 @@ export default function Home() {
                       <p className="text-muted-foreground">Мы рассмотрим его в течение 24 часов</p>
                     </div>
                   ) : (
-                    <div id="feedback-form"></div>
-
+                    <div id="feedback-form">
                     <form onSubmit={handleComplaintSubmit} className="space-y-4">
                       <div>
                         <label className="text-sm font-medium mb-2 block">Ваше имя</label>
@@ -724,6 +723,7 @@ export default function Home() {
                         Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                       </p>
                     </form>
+                    </div>
                   )}
                 </CardContent>
               </Card>
@@ -833,8 +833,7 @@ export default function Home() {
                       <p className="text-muted-foreground">Мы перезвоним вам в течение 15 минут</p>
                     </div>
                   ) : (
-                    <div id="contact-form"></div>
-
+                    <div id="contact-form">
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
                         <label className="text-sm font-medium mb-2 block">Ваше имя</label>
@@ -945,6 +944,7 @@ export default function Home() {
                         Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
                       </p>
                     </form>
+                    </div>
                   )}
                 </CardContent>
               </Card>
