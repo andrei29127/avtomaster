@@ -594,13 +594,9 @@ export default function Home() {
             </div>
             
             <div>
-              <Card className="bg-card border-border p-6 md:p-8">
-                <CardHeader className="p-0 mb-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
-                      <MessageSquare className="w-5 h-5 text-white" />
-                    </div>
-                    <CardTitle>Форма обратной связи</CardTitle>
+              <Card id="feedback-form" className="bg-card border-border p-6 md:p-8">
+  <CardHeader ...>
+    <CardTitle>Форма обратной связи</CardTitle>
                   </div>
                   <CardDescription>
                     Заполните форму и мы свяжемся с вами в ближайшее время
@@ -816,9 +812,9 @@ export default function Home() {
             </div>
             
             <div>
-              <Card className="bg-card border-border p-6 md:p-8">
-                <CardHeader className="p-0 mb-6">
-                  <CardTitle>Форма заявки</CardTitle>
+              <Card id="contact-form" className="bg-card border-border p-6 md:p-8">
+  <CardHeader ...>
+    <CardTitle>Форма заявки</CardTitle>
                   <CardDescription>
                     Заполните форму и мы свяжемся с вами в ближайшее время
                   </CardDescription>
