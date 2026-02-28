@@ -1,98 +1,39 @@
 
-/* GARAGE BACKGROUND */
-body {
-  background: url('/site-bg.jpg') center/cover fixed no-repeat;
-}
+/* ===== STATIC SITE BACKGROUND ===== */
 
+/* затемнение */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.75);
   z-index: -1;
-}
-
-/* CHECK ENGINE ACCENT */
-.engine-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #8cff8c;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.engine-dot {
-  width: 12px;
-  height: 12px;
-  background: #00ff66;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #00ff66;
-  animation: blink 1.5s infinite alternate;
-}
-
-@keyframes blink {
-  from { box-shadow: 0 0 5px #00ff66; }
-  to { box-shadow: 0 0 20px #00ff66; }
-}
-
-
-/* HERO CAR OVERLAY (for the main screen heading) */
-.hero-with-car {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-with-car > * {
-  position: relative;
-  z-index: 1;
-}
-
-.car-overlay {
-  position: absolute;
-  inset: -10% -10% -10% -10%;
-  background: url('/car-silhouette.png') right center no-repeat;
-  background-size: min(780px, 70vw);
-  opacity: 0.14;
-  z-index: 0;
   pointer-events: none;
-  filter: grayscale(100%) blur(0.6px);
 }
 
+/* сам фон */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
 
-/* Mobile bottom buttons: show on phones, hide on desktop (no layout hack) */
-@media (min-width: 768px) {
-  .mobile-bottom-bar {
-    display: none !important;
-  }
-}
-
-
-/* Anchor landing: keep the form visible under any top spacing */
-#contact-form, #feedback-form {
-  scroll-margin-top: 110px;
-}
-
-/* NEW SITE BACKGROUND (static, not zoomed) */
-body {
   background: url('/site-bg.jpg') top center no-repeat;
-  background-attachment: fixed;
-  background-size: 1500px auto; /* prevents huge zoom on desktop */
+  background-size: 1500px auto;
   background-color: #0d0d0d;
 }
 
-/* Large screens: a bit bigger */
+/* большие мониторы */
 @media (min-width: 1400px) {
-  body {
+  body::after {
     background-size: 1800px auto;
   }
 }
 
-/* Mobile: fit without stretching */
+/* мобильные */
 @media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
+  body::after {
     background-size: contain;
     background-position: top center;
   }
