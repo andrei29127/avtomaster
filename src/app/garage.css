@@ -34,7 +34,7 @@ body::after {
 /* мобильные */
 @media (max-width: 768px) {
   body::after {
-    background-size: contain;
+    background-size: background-size: 110% auto;
     background-position: top center;
   }
 }
