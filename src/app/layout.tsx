@@ -27,28 +27,27 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-foreground pb-24`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground pb-24`}
       >
         {children}
         <Toaster />
 
         {/* GLOBAL STICKY ACTION BAR */}
         <div
-          className="mobile-bottom-bar"
           style={{
             position: "fixed",
             bottom: 0,
             left: 0,
             right: 0,
             zIndex: 9999,
-            background: "rgba(0,0,0,0.3)",
+            background: "rgba(255,255,255,0.95)",
             backdropFilter: "blur(8px)",
-            borderTop: "1px solid rgba(255,255,255,0.15)",
+            borderTop: "1px solid #ddd",
             padding: "10px",
           }}
         >
           <div style={{ display: "flex", gap: "10px", maxWidth: "700px", margin: "0 auto" }}>
-            <a href="#contact-form" style={{ flex: 1 }}>
+            <a href="#contact" style={{ flex: 1 }}>
               <button
                 style={{
                   width: "100%",
@@ -64,7 +63,7 @@ export default function RootLayout({
               </button>
             </a>
 
-            <a href="#feedback-form" style={{ flex: 1 }}>
+            <a href="#feedback" style={{ flex: 1 }}>
               <button
                 style={{
                   width: "100%",
