@@ -67,3 +67,9 @@ body::before {
     display: none !important;
   }
 }
+
+
+/* Anchor landing: keep the form visible under any top spacing */
+#contact-form, #feedback-form {
+  scroll-margin-top: 110px;
+}
