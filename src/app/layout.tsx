@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AutoMaster — Техцентр в Керчи",
+  title: "АвтоМастер — Техцентр в Керчи",
   description:
-    "AutoMaster — техцентр: ремонт авто и запчасти в Керчи. Подбор по VIN, консультация, обратная связь.",
+    "АвтоМастер — техцентр: ремонт авто и запчасти в Керчи. Подбор по VIN, консультация, обратная связь.",
 };
 
 export default function RootLayout({
