@@ -234,7 +234,7 @@ export default function Home() {
               <Car className="w-7 h-7 text-white" />
             </div>
             <div className="text-left">
-              <div className="text-3xl font-extrabold tracking-tight">AutoMaster</div>
+              <div className="text-3xl font-extrabold tracking-tight">АвтоМастер</div>
               <div className="text-sm text-muted-foreground font-medium">Техцентр • Запчасти • Ремонт</div>
             </div>
           </div>
@@ -1138,7 +1138,7 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
                   <Car className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xl font-bold">AutoMaster</span>
+                <span className="text-xl font-bold">АвтоМастер</span>
               </div>
               <p className="text-muted-foreground mb-4 max-w-md">
                 Качественный ремонт автомобилей и безопасный подбор запчастей с защитой от мошенников. 
@@ -1180,7 +1180,7 @@ export default function Home() {
           
           <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 AutoMaster. Все права защищены.
+              © 2024 АвтоМастер. Все права защищены.
             </p>
             <p className="text-sm text-muted-foreground">
               Создано с ❤️ для автовладельцев
