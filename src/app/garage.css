@@ -19,15 +19,15 @@ body::after {
   z-index: -2;
   pointer-events: none;
 
-  background: url('/site-bg-v3.jpg') top center no-repeat;
-  background-size: 100% auto;
+  background: url('/site-bg-v4.jpg') top center no-repeat;
+  background-size: 1500px auto;
   background-color: #0d0d0d;
 }
 
 /* большие мониторы */
 @media (min-width: 1400px) {
   body::after {
-    background-size: 100% auto;
+    background-size: 1800px auto;
   }
 }
 
