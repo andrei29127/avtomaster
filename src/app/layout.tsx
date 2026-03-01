@@ -1,3 +1,4 @@
+const MAINTENANCE_MODE = true
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,7 +30,33 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-foreground pb-24`}
       >
-        {children}
+        {MAINTENANCE_MODE ? (
+  <main className="min-h-screen bg-black flex items-center justify-center text-white px-6">
+    <div className="text-center max-w-xl">
+      <h1 className="text-4xl font-bold mb-6">АвтоМастер</h1>
+
+      <p className="text-lg text-white/80 mb-4">
+        На сайте ведутся технические работы
+      </p>
+
+      <p className="text-white/60 mb-8">
+        Мы скоро вернемся онлайн 🚗
+      </p>
+
+      <div className="border border-white/20 rounded-2xl p-6 bg-white/5">
+        <p className="text-sm text-white/70 mb-2">
+          Если вопрос срочный — свяжитесь с нами по телефону
+        </p>
+
+        <p className="text-xl font-semibold">
+          +49 ТВОЙ НОМЕР
+        </p>
+      </div>
+    </div>
+  </main>
+) : (
+  children
+)}
         <Toaster />
 
         {/* GLOBAL STICKY ACTION BAR */}
