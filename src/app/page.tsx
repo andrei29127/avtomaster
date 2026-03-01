@@ -58,7 +58,8 @@ export default function Home() {
   const [complaintSubmitting, setComplaintSubmitting] = useState(false)
 
   const validateVin = (vin: string) => {
-    if (!vin) return 'VIN обязателен для заполнения'
+    // VIN НЕ обязателен. Но если указан — должен быть корректным.
+    if (!vin) return ''
     if (vin.length !== 17) return 'VIN должен содержать ровно 17 символов'
     if (!/^[A-HJ-NPR-Z0-9]+$/i.test(vin)) return 'VIN может содержать только латинские буквы (кроме I, O, Q) и цифры'
     return ''
@@ -859,7 +860,7 @@ export default function Home() {
                       
                       <div>
                         <label className="text-sm font-medium mb-2 block">
-                          VIN автомобиля <span className="text-primary">*</span>
+                          VIN автомобиля <span className="text-muted-foreground">(если есть)</span>
                         </label>
                         <Input
                           type="text"
@@ -871,7 +872,6 @@ export default function Home() {
                             if (vinError) setVinError('')
                           }}
                           maxLength={17}
-                          required
                           className={`bg-secondary border-border ${vinError ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                         />
                         <div className="flex justify-between mt-1">
