@@ -58,7 +58,6 @@ export default function Home() {
   const [complaintSubmitting, setComplaintSubmitting] = useState(false)
 
   const validateVin = (vin: string) => {
-    // VIN НЕ обязателен. Но если указан — должен быть корректным.
     if (!vin) return ''
     if (vin.length !== 17) return 'VIN должен содержать ровно 17 символов'
     if (!/^[A-HJ-NPR-Z0-9]+$/i.test(vin)) return 'VIN может содержать только латинские буквы (кроме I, O, Q) и цифры'
