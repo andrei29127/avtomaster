@@ -1,4 +1,4 @@
-const MAINTENANCE_MODE = true
+const MAINTENANCE_MODE = false
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
