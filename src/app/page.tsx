@@ -742,7 +742,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Свяжитесь с нами для консультации или записи на ремонт. 
-                Мы перезвоним в течение 15 минут в рабочее время.
+                Мы перезвоним в течение 30 минут в рабочее время.
               </p>
               
               <div className="space-y-6">
