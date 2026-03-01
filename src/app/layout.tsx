@@ -41,7 +41,7 @@ export default function RootLayout({
                 <p className="text-sm text-white/70 mb-2">
                   Если вопрос срочный — свяжитесь с нами по телефону
                 </p>
-                <p className="text-xl font-semibold">+7(978)088-41-06  +7(978)858-25-38</p>
+                <p className="text-xl font-semibold">+7(978)088-41-06,+7(978)858-25-38</p>
               </div>
             </div>
           </main>
