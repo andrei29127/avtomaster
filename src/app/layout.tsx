@@ -1,4 +1,4 @@
-const MAINTENANCE_MODE = false
+const MAINTENANCE_MODE = true
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -60,60 +60,56 @@ export default function RootLayout({
 )}
         <Toaster />
 
-        {/* GLOBAL STICKY ACTION BAR */}
-        <div
-          className="mobile-bottom-bar"
-          style={{
-            position: "fixed",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            zIndex: 9999,
-            background: "rgba(0,0,0,0.3)",
-            backdropFilter: "blur(8px)",
-            borderTop: "1px solid rgba(255,255,255,0.15)",
-            padding: "10px",
-          }}
-        >
-          <div style={{ display: "flex", gap: "10px", maxWidth: "700px", margin: "0 auto" }}>
-            <a href="#contact-form" style={{ flex: 1 }}>
-              <button
-                style={{
-                  width: "100%",
-                  background: "linear-gradient(90deg,#ff7a18,#ffb347)",
-                  color: "#fff",
-                  padding: "14px",
-                  borderRadius: "10px",
-                  fontWeight: 700,
-                  border: "none",
-                }}
-              >
-                🚗 Заявка
-              </button>
-            </a>
+       {!MAINTENANCE_MODE && (
+  <>
+    {/* GLOBAL STICKY ACTION BAR */}
+    <div
+      className="mobile-bottom-bar"
+      style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 9999,
+        background: "rgba(0,0,0,0.3)",
+        backdropFilter: "blur(8px)",
+        borderTop: "1px solid rgba(255,255,255,0.15)",
+        padding: "10px",
+      }}
+    >
+      <div style={{ display: "flex", gap: "10px", maxWidth: "700px", margin: "0 auto" }}>
+        <a href="#contact-form" style={{ flex: 1 }}>
+          <button
+            style={{
+              width: "100%",
+              background: "linear-gradient(90deg,#ff7a18,#ffb347)",
+              color: "#fff",
+              padding: "14px",
+              borderRadius: "10px",
+              fontWeight: 700,
+              border: "none",
+            }}
+          >
+            🚗 Заявка
+          </button>
+        </a>
 
-            <a href="#feedback-form" style={{ flex: 1 }}>
-              <button
-                style={{
-                  width: "100%",
-                  background: "#22c55e",
-                  color: "#fff",
-                  padding: "14px",
-                  borderRadius: "10px",
-                  fontWeight: 700,
-                  border: "none",
-                }}
-              >
-                💬 Связь
-              </button>
-            </a>
-          </div>
-        </div>
-      </body>
-    </html>
-  );
-}
-
-
-
-
+        <a href="#feedback-form" style={{ flex: 1 }}>
+          <button
+            style={{
+              width: "100%",
+              background: "#22c55e",
+              color: "#fff",
+              padding: "14px",
+              borderRadius: "10px",
+              fontWeight: 700,
+              border: "none",
+            }}
+          >
+            💬 Связь
+          </button>
+        </a>
+      </div>
+    </div>
+  </>
+)}
