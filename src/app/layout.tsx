@@ -49,7 +49,8 @@ export default function RootLayout({
         </p>
 
         <p className="text-xl font-semibold">
-          +49 ТВОЙ НОМЕР
+          +7(978)088-41-06 
+          +7(978)858-25-38
         </p>
       </div>
     </div>
