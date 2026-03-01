@@ -829,7 +829,7 @@ export default function Home() {
                         <CheckCircle2 className="w-8 h-8" />
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Заявка отправлена!</h3>
-                      <p className="text-muted-foreground">Мы перезвоним вам в течение 15 минут</p>
+                      <p className="text-muted-foreground">Мы перезвоним вам в течение 30 минут</p>
                     </div>
                   ) : (
 <form onSubmit={handleSubmit} className="space-y-4">
