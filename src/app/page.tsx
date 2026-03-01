@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <main className="min-h-screen bg-black flex items-center justify-center text-white px-6">
+    <main className="fixed inset-0 z-50 bg-black flex items-center justify-center text-white px-6">
       <div className="text-center max-w-xl">
         <h1 className="text-4xl font-bold mb-6">АвтоМастер</h1>
         <p className="text-lg text-white/80 mb-4">
