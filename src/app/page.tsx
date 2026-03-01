@@ -92,7 +92,7 @@ export default function Home() {
         setTimeout(() => {
           setFormSubmitted(false)
           setFormData({ name: '', phone: '', vin: '', service: '', message: '' })
-        }, 5000)
+        }, 8000)
       } else {
         setSubmitError(result.error || 'Ошибка при отправке заявки')
       }
@@ -124,7 +124,7 @@ export default function Home() {
         setTimeout(() => {
           setComplaintSubmitted(false)
           setComplaintData({ name: '', phone: '', type: 'complaint', orderNumber: '', message: '' })
-        }, 5000)
+        }, 8000)
       }
     } catch (error) {
       console.error('Complaint submit error:', error)
