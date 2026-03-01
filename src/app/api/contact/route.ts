@@ -18,7 +18,7 @@ const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
 interface ContactFormData {
   name: string;
   phone: string;
-  vin: string;
+  vin?: string;
   service: string;
   message?: string;
 }
@@ -47,7 +47,7 @@ function buildContactText(data: ContactFormData) {
     "🔔 Новая заявка с сайта АвтоМастер",
     `👤 Имя: ${data.name}`,
     `📱 Телефон: ${data.phone}`,
-    `🚗 VIN: ${data.vin}`,
+    `🚗 VIN: ${data.vin ? data.vin : "—"}`,
     `🔧 Услуга: ${serviceText}`,
     data.message ? `📝 Сообщение: ${data.message}` : "",
     `⏰ ${dateStr}`,
@@ -222,10 +222,10 @@ export async function POST(request: NextRequest) {
   try {
     const data: ContactFormData = await request.json();
 
-    if (!data?.name || !data?.phone || !data?.vin || !data?.service) {
+    if (!data?.name || !data?.phone || !data?.service) {
       return NextResponse.json({ success: false, error: "Заполните все обязательные поля" }, { status: 400 });
     }
-    if (String(data.vin).length !== 17) {
+    if (data?.vin && String(data.vin).trim().length !== 17) {
       return NextResponse.json({ success: false, error: "VIN должен содержать 17 символов" }, { status: 400 });
     }
 
